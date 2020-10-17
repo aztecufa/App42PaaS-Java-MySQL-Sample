@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:18.04
 RUN apt-get update
 RUN apt-get install -y maven default-jdk git
 RUN git clone https://github.com/aztecufa/App42PaaS-Java-MySQL-Sample.git /root/app && \
