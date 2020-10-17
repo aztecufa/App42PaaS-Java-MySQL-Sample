@@ -17,7 +17,7 @@ services:
         volumes:
             - files:/usr/local/tomcat/webapps
 
-    volumes:
-        files:
+volumes:
+  files:
 
 
