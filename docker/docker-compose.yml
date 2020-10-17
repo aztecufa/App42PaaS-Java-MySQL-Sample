@@ -11,7 +11,8 @@ services:
         environment:
             - MYSQL_ROOT_PASSWORD=secret
     prod:
-        image: tomcat:8
+        #image: tomcat:8
+        image: tomcat:6.0.43
         ports:
             - "8080:8080"
         volumes:
