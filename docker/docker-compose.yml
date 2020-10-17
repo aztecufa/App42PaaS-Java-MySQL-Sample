@@ -1,0 +1,23 @@
+version: "3"
+services:
+    build:
+        build: ./maven
+        volumes:
+            - files:/root/webapps
+    db:
+        image: mariadb:10.1
+        ports:
+            - "8514:8514"
+        environment:
+            - MYSQL_ROOT_PASSWORD=secret
+    prod:
+        image: tomcat:8
+        ports:
+            - "8080:8080"
+        volumes:
+            - files:/usr/local/tomcat/webapps
+
+    volumes:
+        files:
+
+

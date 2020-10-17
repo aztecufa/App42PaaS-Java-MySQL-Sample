@@ -1,0 +1,6 @@
+FROM ubuntu:14.04
+RUN apt-get update
+RUN apt-get install -y maven default-jdk git
+RUN git clone https://github.com/aztecufa/App42PaaS-Java-MySQL-Sample.git /root/app && \
+    mvn package -f /root/app/pom.xml && \
+    cp root/app/target/App42PaaS-Java-MySQL-Sample-0.0.1-SNAPSHOT.war /root/webapps/app.war
