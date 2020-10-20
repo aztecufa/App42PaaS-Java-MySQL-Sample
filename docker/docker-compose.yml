@@ -5,13 +5,12 @@ services:
         volumes:
             - files:/root/webapps
     db:
-        image: postgres
-        #image: mariadb:10.1
+        image: mariadb:10.1
         ports:
-            - "5432:5432"
+            - "3306:3306"
         environment:
-            - POSTGRES_PASSWORD=secret
-            #- MYSQL_ROOT_PASSWORD=secret
+            - MYSQL_ROOT_PASSWORD=secret
+            - MYSQL_DATABASE=base
     prod:
         image: tomcat:7
         ports:
